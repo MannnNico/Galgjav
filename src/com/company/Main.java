@@ -1,6 +1,5 @@
 package com.company;
 
-import java.lang.reflect.Array;
 import java.util.Scanner;
 
 public class Main {
@@ -8,14 +7,15 @@ public class Main {
     
     public static Integer difficulty = 0;
     public static Integer maxTries = 100;
-    public static String word;
+
 
 
     public static void main(String[] args) {
         name();
         difficulty();
         wordgenerator();
-        wordTransfer();
+        Guess();
+
     }
 
     private static void name() {
@@ -62,11 +62,24 @@ public class Main {
         System.out.println("Please enter the word you wich to guess!");
         String word = sx.next();
         System.out.println("Your input: " + word);
+        wordTransfer(word);
     }
-    static void wordTransfer(){
-       char[] wordarray = word.toCharArray();
-       System.out.println(wordarray);
-        hasfesjjjjjjj
+    static void wordTransfer(String word){
+        int wordLegth = word.length();
+        char[] wordarray = new char[wordLegth];
+       wordarray = word.toCharArray();
+       System.out.println(wordarray[0]);
+       Guess(wordarray);
+    }
+    static void Guess(char[] testarray){
+        Scanner Guess = new Scanner(System.in);
+        System.out.println("Take Guess!");
+        String GuessInput = Guess.next();
+        System.out.println(GuessInput);
+
+        for(char i = 0;i < testarray.length;i++) {
+
+        }
     }
 }
 
