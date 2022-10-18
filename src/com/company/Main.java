@@ -1,5 +1,6 @@
 package com.company;
 
+import java.lang.reflect.Array;
 import java.util.Scanner;
 
 public class Main {
@@ -52,7 +53,7 @@ public class Main {
     static void setDifficultyToTries() {
         Float tries;    //float für Zahlen mit Kommata
         Float multipierTries;
-        multipierTries = ((float) (difficulty / 10.));
+        multipierTries = ((float) (difficulty / 10.0));
         tries = maxTries * multipierTries;
         System.out.println("You have "+ tries + " tries!");
     }
@@ -63,9 +64,9 @@ public class Main {
         System.out.println("Your input: " + word);
     }
     static void wordTransfer(){
-       char[] Array = word.toCharArray();
-
-
+       char[] wordarray = word.toCharArray();
+       System.out.println(wordarray);
+        hasfesjjjjjjj
     }
 }
 
